@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdant — Brand Summary</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:opsz,wght@9..40,400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #2D4A3E;
+  --terracotta: #C4613A;
+  --sage: #8FAF9A;
+  --ivory: #F5F0E8;
+  --charcoal: #1C1C1A;
+  --stone: #B0A898;
+  --mid: #6A6A60;
+  --white: #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6, .header-name { font-family: 'Playfair Display', Georgia, serif; }
+body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--charcoal); max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+.header { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.25rem; background: var(--ivory); border-radius: 16px; padding: 2rem 2.5rem; margin-bottom: 1.5rem; border: 1px solid #E8E4DC; }
+.header-logo svg { width: 38px; height: 50px; display: block; }
+.header-name { font-size: 2rem; font-weight: 700; color: var(--charcoal); letter-spacing: -0.03em; }
+.header-tagline { font-size: 0.82rem; color: var(--stone); margin-top: 0.2rem; }
+.header-badge { background: var(--green); color: white; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 100px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+.card { background: var(--white); border: 1px solid #EEEEE8; border-radius: 12px; padding: 1.5rem; }
+.card-label { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone); margin-bottom: 1rem; }
+.swatch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.75rem; }
+.swatch-block { border-radius: 10px; overflow: hidden; border: 1px solid #EEEEE8; }
+.swatch { height: 70px; }
+.swatch-info { padding: 0.6rem 0.75rem; background: white; border-top: 1px solid #EEEEE8; }
+.swatch-name { font-size: 0.72rem; font-weight: 700; }
+.swatch-hex { font-size: 0.65rem; color: var(--mid); font-family: 'SF Mono', monospace; }
+.type-row { padding: 0.6rem 0; border-bottom: 1px solid #F4F4F0; display: flex; align-items: baseline; gap: 1rem; }
+.type-row:last-child { border-bottom: none; }
+.type-meta-sm { font-size: 0.62rem; color: var(--stone); min-width: 100px; font-family: monospace; }
+.keywords { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.kw { background: var(--ivory); font-size: 0.72rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 100px; color: var(--charcoal); }
+.voice-row { display: flex; gap: 1rem; align-items: flex-start; padding: 0.6rem 0; border-bottom: 1px solid #F4F4F0; }
+.voice-row:last-child { border-bottom: none; }
+.voice-trait { font-size: 0.8rem; font-weight: 700; min-width: 80px; }
+.voice-desc { font-size: 0.78rem; color: var(--mid); line-height: 1.5; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 12px; overflow: hidden; border: 1px solid #EEEEE8; }
+.compare-col { padding: 1.25rem; }
+.compare-col:first-child { background: #F9F9F7; border-right: 1px solid #EEEEE8; }
+.compare-col:last-child { background: white; }
+.compare-head { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+.compare-col:first-child .compare-head { color: var(--stone); }
+.compare-col:last-child .compare-head { color: var(--green); }
+.compare-item { font-size: 0.78rem; color: var(--mid); line-height: 1.6; padding: 0.25rem 0; }
+.compare-col:first-child .compare-item::before { content: '✕'; margin-right: 0.4rem; color: #CCC; }
+.compare-col:last-child .compare-item::before { content: '✓'; margin-right: 0.4rem; color: var(--green); }
+.footer { border-top: 1px solid #EEEEE8; margin-top: 1.5rem; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-text { font-size: 0.65rem; color: var(--stone); }
+@media print { body { padding: 1.5cm; max-width: none; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">
+    <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#2D4A3E"/>
+      <line x1="30" y1="5" x2="30" y2="74" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M30,28 C22,38 14,54 11,67" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M30,28 C38,38 46,54 49,67" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div>
+    <div class="header-name">Verdant</div>
+    <div class="header-tagline">Brand Quick Reference · 2026</div>
+  </div>
+  <div class="header-badge">Internal Use</div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <div class="card-label">Color Palette</div>
+    <div class="swatch-grid">
+      <div class="swatch-block"><div class="swatch" style="background:#2D4A3E;"></div><div class="swatch-info"><div class="swatch-name">Forest</div><div class="swatch-hex">#2D4A3E · Primary</div></div></div>
+      <div class="swatch-block"><div class="swatch" style="background:#C4613A;"></div><div class="swatch-info"><div class="swatch-name">Terracotta</div><div class="swatch-hex">#C4613A · Primary</div></div></div>
+      <div class="swatch-block"><div class="swatch" style="background:#8FAF9A;"></div><div class="swatch-info"><div class="swatch-name">Sage</div><div class="swatch-hex">#8FAF9A · Secondary</div></div></div>
+      <div class="swatch-block"><div class="swatch" style="background:#F5F0E8;border:1px solid #E8E4DC;"></div><div class="swatch-info"><div class="swatch-name">Ivory</div><div class="swatch-hex">#F5F0E8 · Background</div></div></div>
+    </div>
+    <div class="swatch-grid">
+      <div class="swatch-block"><div class="swatch" style="background:#1C1C1A;"></div><div class="swatch-info"><div class="swatch-name">Charcoal</div><div class="swatch-hex">#1C1C1A · Text</div></div></div>
+      <div class="swatch-block"><div class="swatch" style="background:#B0A898;"></div><div class="swatch-info"><div class="swatch-name">Stone</div><div class="swatch-hex">#B0A898 · Neutral</div></div></div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:1.25rem;">
+    <div class="card">
+      <div class="card-label">Brand Personality</div>
+      <div class="keywords">
+        <span class="kw">Grounded</span><span class="kw">Honest</span><span class="kw">Warm</span>
+        <span class="kw">Deliberate</span><span class="kw">Understated</span><span class="kw">Considered</span>
+        <span class="kw">Natural</span><span class="kw">Precise</span><span class="kw">Unhurried</span>
+      </div>
+    </div>
+    <div class="card" style="flex:1;">
+      <div class="card-label">Brand Voice</div>
+      <div class="voice-row"><span class="voice-trait">Grounded</span><span class="voice-desc">Material-first, specific. Never vague sustainability claims.</span></div>
+      <div class="voice-row"><span class="voice-trait">Honest</span><span class="voice-desc">Say what you don't know too. Trust is built in specifics.</span></div>
+      <div class="voice-row"><span class="voice-trait">Warm</span><span class="voice-desc">Personal, not corporate. A knowledgeable friend, not a FAQ.</span></div>
+      <div class="voice-row"><span class="voice-trait">Unhurried</span><span class="voice-desc">Short sentences. No urgency tactics. No manufactured scarcity.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:1.25rem;">
+  <div class="card-label">Typography — Playfair Display (headings) · DM Sans (body)</div>
+  <div class="type-row"><span class="type-meta-sm">Playfair · 700</span><span style="font-size:1.8rem;font-weight:700;letter-spacing:-0.03em;line-height:1;font-family:'Playfair Display',Georgia,serif;">Made to last.</span></div>
+  <div class="type-row"><span class="type-meta-sm">Playfair · 700</span><span style="font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;font-family:'Playfair Display',Georgia,serif;">Know your materials</span></div>
+  <div class="type-row"><span class="type-meta-sm">DM Sans · 400</span><span style="font-size:0.9rem;font-weight:400;color:var(--mid);">370gsm waffle linen, certified European flax. No blends, no shortcuts.</span></div>
+  <div class="type-row"><span class="type-meta-sm">DM Sans · 700</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Section Label</span></div>
+</div>
+
+<div style="margin-bottom:1.25rem;">
+  <div class="card-label" style="margin-bottom:0.75rem;">This is Verdant / This isn't Verdant</div>
+  <div class="compare">
+    <div class="compare-col"><div class="compare-head">Not us</div><div class="compare-item">Vague eco-claims and sustainability jargon</div><div class="compare-item">Urgency tactics and manufactured scarcity</div><div class="compare-item">Inspiration without specific information</div><div class="compare-item">Corporate language, press-release tone</div></div>
+    <div class="compare-col"><div class="compare-head">Us</div><div class="compare-item">Specific materials, origins, and processes</div><div class="compare-item">Plain language about limited stock, no drama</div><div class="compare-item">Specific details the customer can actually use</div><div class="compare-item">Personal tone, as if from the maker</div></div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-text">Verdant Brand Guidelines 2026 · For internal use and approved partners</div>
+  <div class="footer-text">verdant.co</div>
+</div>
+
+</body>
+</html>

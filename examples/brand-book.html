@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdant — Brand Guidelines 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #2D4A3E;
+  --terracotta: #C4613A;
+  --sage: #8FAF9A;
+  --ivory: #F5F0E8;
+  --charcoal: #1C1C1A;
+  --stone: #B0A898;
+  --mid: #5A5A52;
+  --light-text: #8A8A7E;
+  --white: #FFFFFF;
+  --bg-warm: #FAF7F2;
+  --bg-light: #F0EDE8;
+  --sidebar-w: 220px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+h1, h2, h3, h4, h5, h6,
+.cover h1, .section-title, .spec-h1, .spec-h2, .spec-h3,
+.sidebar-brand, .voice-card h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--white);
+  color: var(--charcoal);
+  line-height: 1.6;
+  display: flex;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: var(--green);
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 100;
+  overflow-y: auto;
+}
+.sidebar-logo { margin-bottom: 2rem; }
+.sidebar-logo svg { width: 28px; height: 37px; display: block; }
+.sidebar-brand { color: white; font-weight: 700; font-size: 0.95rem; margin-top: 0.6rem; letter-spacing: -0.02em; }
+.sidebar-label { color: rgba(255,255,255,0.4); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin: 1.25rem 0 0.5rem; font-family: 'DM Sans', sans-serif; }
+.sidebar a {
+  display: block; color: rgba(255,255,255,0.7); text-decoration: none;
+  font-size: 0.8rem; font-weight: 500; padding: 0.35rem 0.6rem;
+  border-radius: 6px; transition: all 0.15s; font-family: 'DM Sans', sans-serif;
+}
+.sidebar a:hover, .sidebar a.active {
+  background: rgba(255,255,255,0.12); color: white;
+}
+
+/* ── Main ── */
+.main {
+  margin-left: var(--sidebar-w);
+  width: calc(100% - var(--sidebar-w));
+  min-height: 100vh;
+}
+
+/* ── Cover ── */
+.cover {
+  background: var(--green);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 440px;
+  height: 580px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.cover-icon { width: 56px; height: 74px; margin-bottom: 3rem; }
+.cover h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  color: var(--ivory);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.cover-sub { color: rgba(245,240,232,0.5); font-size: 1.05rem; font-weight: 400; }
+.cover-year {
+  position: absolute;
+  bottom: 3rem;
+  right: 5rem;
+  color: rgba(245,240,232,0.28);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Sections ── */
+.section {
+  padding: 5rem;
+  border-bottom: 1px solid var(--bg-light);
+}
+.section:nth-child(even) { background: var(--bg-warm); }
+.section-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--charcoal);
+}
+.section-intro {
+  font-size: 1.05rem;
+  color: var(--mid);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+.divider { height: 1px; background: var(--bg-light); margin: 3rem 0; }
+
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.pillar {
+  background: white;
+  border-radius: 12px;
+  padding: 1.75rem;
+  border: 1px solid rgba(45,74,62,0.1);
+}
+.pillar-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.pillar h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; font-family: 'DM Sans', sans-serif; }
+.pillar p { font-size: 0.85rem; color: var(--mid); line-height: 1.6; }
+
+.keywords { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.keyword {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  letter-spacing: -0.01em;
+}
+
+.audience-card {
+  background: var(--charcoal);
+  color: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  max-width: 600px;
+}
+.audience-card h3 { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; }
+.audience-card p { font-size: 1.05rem; line-height: 1.7; color: rgba(255,255,255,0.82); }
+
+.logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.logo-card {
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 180px;
+  justify-content: center;
+}
+.logo-card.bg-green { background: var(--green); }
+.logo-card.bg-white { background: white; border: 1px solid #eee; }
+.logo-card.bg-dark { background: var(--charcoal); }
+.logo-card.bg-terracotta { background: var(--terracotta); }
+.logo-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); font-family: 'DM Sans', sans-serif; }
+.logo-card.bg-green .logo-label,
+.logo-card.bg-dark .logo-label,
+.logo-card.bg-terracotta .logo-label { color: rgba(255,255,255,0.45); }
+
+.clearspace-demo {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 3rem;
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.clearspace-inner {
+  position: relative;
+  outline: 2px dashed rgba(45,74,62,0.3);
+  padding: 24px;
+}
+.clearspace-x {
+  position: absolute;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--green);
+  top: 4px; left: 50%; transform: translateX(-50%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.dont-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.dont-card { background: white; border-radius: 12px; padding: 1.5rem; border: 1px solid #eee; text-align: center; }
+.dont-card .dont-label { font-size: 0.7rem; color: #D44; font-weight: 600; margin-top: 0.75rem; font-family: 'DM Sans', sans-serif; }
+
+.color-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+.color-card { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.color-swatch { height: 120px; }
+.color-info { background: white; padding: 1rem; }
+.color-name { font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; }
+.color-vals { font-size: 0.72rem; color: var(--mid); font-family: 'SF Mono', 'Fira Code', monospace; line-height: 1.8; }
+.color-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; margin-bottom: 0.4rem; font-family: 'DM Sans', sans-serif; }
+.tag-primary { background: #D0E4DA; color: #1A3028; }
+.tag-secondary { background: #D8EBE0; color: #2C5A3A; }
+.tag-accent { background: #F5DDD4; color: #7A3020; }
+.tag-neutral { background: #EDEDE8; color: #5A5A50; }
+
+.contrast-row { margin-top: 1.5rem; }
+.contrast-pair {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+}
+.contrast-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: auto;
+  font-family: 'DM Sans', sans-serif;
+}
+.pass { background: #D0E4DA; color: #1A3028; }
+.warn { background: #FFEECC; color: #A06010; }
+
+.type-specimen { background: white; border-radius: 12px; padding: 2rem; border: 1px solid #eee; margin-bottom: 1.5rem; }
+.type-meta { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); margin-bottom: 0.75rem; font-family: 'DM Sans', sans-serif; }
+.spec-h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+.spec-h2 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.spec-h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
+.spec-h4 { font-size: 1rem; font-weight: 600; font-family: 'DM Sans', sans-serif; }
+.spec-body { font-size: 1rem; font-weight: 400; line-height: 1.7; color: var(--mid); font-family: 'DM Sans', sans-serif; }
+.spec-small { font-size: 0.82rem; font-weight: 400; color: var(--mid); font-family: 'DM Sans', sans-serif; }
+.spec-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
+
+.type-scale { margin-top: 2rem; }
+.scale-row { display: flex; align-items: baseline; gap: 1.5rem; padding: 0.75rem 0; border-bottom: 1px solid var(--bg-light); }
+.scale-meta { min-width: 140px; font-size: 0.7rem; color: var(--mid); font-family: monospace; }
+
+.style-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+.style-card { background: white; border-radius: 12px; padding: 1.5rem; border: 1px solid #eee; }
+.style-card h4 { font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem; font-family: 'DM Sans', sans-serif; }
+.style-card ul { list-style: none; padding: 0; }
+.style-card li { font-size: 0.8rem; color: var(--mid); padding: 0.25rem 0; display: flex; gap: 0.5rem; }
+.style-card li::before { content: '→'; color: var(--green); font-weight: 600; }
+
+.voice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+.voice-card { background: white; border-radius: 12px; padding: 1.75rem; border-left: 4px solid var(--terracotta); }
+.voice-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; font-family: 'DM Sans', sans-serif; }
+.voice-card .v-means { font-size: 0.75rem; font-weight: 600; color: var(--terracotta); margin-bottom: 0.5rem; font-family: 'DM Sans', sans-serif; }
+.voice-card p { font-size: 0.82rem; color: var(--mid); line-height: 1.6; }
+
+.tone-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+.tone-table th { text-align: left; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); padding: 0.75rem 1rem; background: var(--bg-warm); font-family: 'DM Sans', sans-serif; }
+.tone-table td { font-size: 0.82rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--bg-light); vertical-align: top; }
+.tone-table td:first-child { font-weight: 600; }
+
+.copy-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+.copy-bad, .copy-good { border-radius: 12px; padding: 1.5rem; }
+.copy-bad { background: #FFF5F5; border: 1px solid #FFE0E0; }
+.copy-good { background: #F2F7F2; border: 1px solid #C8E0C8; }
+.copy-verdict { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; font-family: 'DM Sans', sans-serif; }
+.copy-bad .copy-verdict { color: #D44; }
+.copy-good .copy-verdict { color: #3A6A3A; }
+.copy-bad p, .copy-good p { font-size: 0.85rem; line-height: 1.6; }
+
+.mockup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+
+.social-mockup {
+  background: var(--green);
+  border-radius: 12px;
+  padding: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.social-mockup .sm-tag {
+  background: rgba(255,255,255,0.1);
+  color: rgba(245,240,232,0.8);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  width: fit-content;
+  font-family: 'DM Sans', sans-serif;
+}
+.social-mockup .sm-headline {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ivory);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.social-mockup .sm-footer { display: flex; justify-content: space-between; align-items: center; }
+.social-mockup .sm-handle { font-size: 0.72rem; color: rgba(245,240,232,0.45); font-family: 'DM Sans', sans-serif; }
+
+.email-mockup {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+.email-header { background: var(--charcoal); padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+.email-header span { color: var(--ivory); font-weight: 700; font-size: 0.95rem; letter-spacing: -0.02em; font-family: 'Playfair Display', Georgia, serif; }
+.email-body { padding: 1.5rem 2rem; }
+.email-subject { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.email-preview { font-size: 0.82rem; color: var(--mid); line-height: 1.6; }
+
+.button-showcase { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1.5rem; }
+.btn { padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; border: 2px solid transparent; letter-spacing: -0.01em; }
+.btn-primary { background: var(--green); color: white; }
+.btn-secondary { background: var(--terracotta); color: white; }
+.btn-ghost { background: transparent; color: var(--green); border-color: var(--green); }
+.btn-light { background: var(--ivory); color: var(--charcoal); }
+
+.quote-card {
+  background: var(--ivory);
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 4px solid var(--terracotta);
+}
+.quote-text { font-size: 1.1rem; font-weight: 700; line-height: 1.65; color: var(--charcoal); font-family: 'Playfair Display', Georgia, serif; font-style: italic; }
+.quote-attr { font-size: 0.78rem; color: var(--mid); margin-top: 0.75rem; }
+
+@media print {
+  .sidebar { display: none !important; }
+  .main { margin-left: 0 !important; width: 100% !important; }
+  .cover { min-height: auto; padding: 4rem; page-break-after: always; }
+  .section { page-break-inside: avoid; padding: 3rem 4rem; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .mockup-grid, .copy-compare { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; width: 100%; }
+  .section { padding: 3rem 1.5rem; }
+  .cover { padding: 3rem 1.5rem; }
+  .copy-compare { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="white"/>
+      <line x1="30" y1="5" x2="30" y2="74" stroke="#2D4A3E" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M30,28 C22,38 14,54 11,67" stroke="#2D4A3E" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M30,28 C38,38 46,54 49,67" stroke="#2D4A3E" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="sidebar-brand">Verdant</div>
+  </div>
+  <div class="sidebar-label">Brand Book</div>
+  <a href="#foundation">01 — Foundation</a>
+  <a href="#logo">02 — Logo</a>
+  <a href="#colors">03 — Colors</a>
+  <a href="#typography">04 — Typography</a>
+  <a href="#imagery">05 — Imagery</a>
+  <a href="#voice">06 — Voice &amp; Tone</a>
+  <a href="#brand-in-use">07 — Brand in Use</a>
+</nav>
+
+<main class="main">
+
+  <section class="cover" id="cover">
+    <svg class="cover-icon" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="rgba(245,240,232,0.85)"/>
+      <line x1="30" y1="5" x2="30" y2="74" stroke="#2D4A3E" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M30,28 C22,38 14,54 11,67" stroke="#2D4A3E" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M30,28 C38,38 46,54 49,67" stroke="#2D4A3E" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </svg>
+    <h1>Brand<br>Guidelines</h1>
+    <p class="cover-sub">The visual and verbal identity of Verdant</p>
+    <div class="cover-year">2026 Edition</div>
+  </section>
+
+  <section class="section" id="foundation">
+    <div class="section-number">01</div>
+    <h2 class="section-title">Brand Foundation</h2>
+    <p class="section-intro">Before colors and fonts, there's a reason. Verdant exists to make home goods worth keeping — things built with care, from materials you can trace, that get better with time.</p>
+    <p style="max-width:640px;color:var(--mid);line-height:1.8;margin-bottom:2rem;">Verdant makes home goods built to last — textiles, storage, and surfaces sourced and crafted with full transparency. Started with a single line of European linen in 2019, the brand has grown into a complete home collection grounded in one belief: the most sustainable thing you can buy is something you never have to replace.</p>
+    <div class="divider"></div>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.25rem;font-family:'DM Sans',sans-serif;">Brand Values</h3>
+    <div class="pillars">
+      <div class="pillar"><div class="pillar-icon">⌛</div><h3>Longevity over trend</h3><p>We make things that outlast seasons. If it won't look right in ten years, we don't make it.</p></div>
+      <div class="pillar"><div class="pillar-icon">🌿</div><h3>Material honesty</h3><p>We tell you what's in every product and where it came from. We also flag what we don't know yet.</p></div>
+      <div class="pillar"><div class="pillar-icon">🤫</div><h3>Quiet confidence</h3><p>Good things don't need loud marketing. We let the quality speak. No exaggeration, no urgency.</p></div>
+      <div class="pillar"><div class="pillar-icon">▫</div><h3>Less, better</h3><p>A smaller range of things made right. Restraint is a design decision.</p></div>
+    </div>
+    <div class="divider"></div>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.75rem;font-family:'DM Sans',sans-serif;">Brand Personality</h3>
+    <div class="keywords">
+      <span class="keyword">Grounded</span><span class="keyword">Honest</span><span class="keyword">Warm</span>
+      <span class="keyword">Deliberate</span><span class="keyword">Understated</span><span class="keyword">Considered</span>
+      <span class="keyword">Natural</span><span class="keyword">Precise</span><span class="keyword">Unhurried</span><span class="keyword">Trustworthy</span>
+    </div>
+    <div class="divider"></div>
+    <div class="audience-card">
+      <h3>Who we're talking to</h3>
+      <p>Homeowners and renters, 30–50, who are done replacing cheap things every two years. They research before buying, care about supply chains without being preachy about it, and appreciate products that come with a specific story — not a vague sustainability claim.</p>
+    </div>
+  </section>
+
+  <section class="section" id="logo">
+    <div class="section-number">02</div>
+    <h2 class="section-title">Logo Guidelines</h2>
+    <p class="section-intro">The Verdant mark is a single leaf — simple, organic, and immediately readable at any size. No gradients, no effects.</p>
+    <div class="logo-grid">
+      <div class="logo-card bg-green"><svg width="52" height="69" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="white"/><line x1="30" y1="5" x2="30" y2="74" stroke="#2D4A3E" stroke-width="1.5" stroke-linecap="round"/><path d="M30,28 C22,38 14,54 11,67" stroke="#2D4A3E" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M30,28 C38,38 46,54 49,67" stroke="#2D4A3E" stroke-width="1" fill="none" stroke-linecap="round"/></svg><span class="logo-label">Primary — Icon on Forest</span></div>
+      <div class="logo-card bg-white"><svg width="52" height="69" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#2D4A3E"/><line x1="30" y1="5" x2="30" y2="74" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M30,28 C22,38 14,54 11,67" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M30,28 C38,38 46,54 49,67" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/></svg><span class="logo-label">Icon on White</span></div>
+      <div class="logo-card bg-dark"><svg width="52" height="69" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="white"/><line x1="30" y1="5" x2="30" y2="74" stroke="#1C1C1A" stroke-width="1.5" stroke-linecap="round"/><path d="M30,28 C22,38 14,54 11,67" stroke="#1C1C1A" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M30,28 C38,38 46,54 49,67" stroke="#1C1C1A" stroke-width="1" fill="none" stroke-linecap="round"/></svg><span class="logo-label">Icon on Charcoal</span></div>
+      <div class="logo-card bg-terracotta"><svg width="52" height="69" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#F5F0E8"/><line x1="30" y1="5" x2="30" y2="74" stroke="#C4613A" stroke-width="1.5" stroke-linecap="round"/><path d="M30,28 C22,38 14,54 11,67" stroke="#C4613A" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M30,28 C38,38 46,54 49,67" stroke="#C4613A" stroke-width="1" fill="none" stroke-linecap="round"/></svg><span class="logo-label">Icon on Terracotta</span></div>
+    </div>
+    <div class="divider"></div>
+    <div class="dont-grid">
+      <div class="dont-card"><svg width="48" height="64" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(1.7);"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#2D4A3E"/></svg><div class="dont-label">✕ Don't stretch</div></div>
+      <div class="dont-card"><svg width="48" height="64" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" style="opacity:0.2;"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#2D4A3E"/></svg><div class="dont-label">✕ Don't use low opacity</div></div>
+      <div class="dont-card"><svg width="48" height="64" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#8FAF9A"/></svg><div class="dont-label">✕ Don't use Sage as bg</div></div>
+      <div class="dont-card"><svg width="48" height="64" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 8px #2D4A3E);"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#2D4A3E"/></svg><div class="dont-label">✕ Don't add glow or shadow</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="colors">
+    <div class="section-number">03</div>
+    <h2 class="section-title">Color Palette</h2>
+    <p class="section-intro">Verdant's palette is drawn from the materials themselves — forest earth, dried terracotta, natural linen, and sage.</p>
+    <div class="color-row">
+      <div class="color-card"><div class="color-swatch" style="background:#2D4A3E;"></div><div class="color-info"><span class="color-tag tag-primary">Primary</span><div class="color-name">Forest</div><div class="color-vals">HEX #2D4A3E<br>RGB 45, 74, 62<br>CMYK 39, 0, 16, 71</div></div></div>
+      <div class="color-card"><div class="color-swatch" style="background:#C4613A;"></div><div class="color-info"><span class="color-tag tag-accent">Primary</span><div class="color-name">Terracotta</div><div class="color-vals">HEX #C4613A<br>RGB 196, 97, 58<br>CMYK 0, 51, 70, 23</div></div></div>
+      <div class="color-card"><div class="color-swatch" style="background:#8FAF9A;"></div><div class="color-info"><span class="color-tag tag-secondary">Secondary</span><div class="color-name">Sage</div><div class="color-vals">HEX #8FAF9A<br>RGB 143, 175, 154<br>CMYK 18, 0, 12, 31</div></div></div>
+      <div class="color-card"><div class="color-swatch" style="background:#1C1C1A;"></div><div class="color-info"><span class="color-tag tag-neutral">Neutral</span><div class="color-name">Charcoal</div><div class="color-vals">HEX #1C1C1A<br>Primary text, dark UI</div></div></div>
+    </div>
+    <div class="contrast-row">
+      <div class="contrast-pair" style="background:#1C1C1A;"><span style="color:white;">White on Charcoal</span><span class="contrast-badge pass">18.5:1 — AAA</span></div>
+      <div class="contrast-pair" style="background:#F5F0E8;"><span style="color:#1C1C1A;">Charcoal on Ivory</span><span class="contrast-badge pass">15.8:1 — AAA</span></div>
+      <div class="contrast-pair" style="background:#2D4A3E;"><span style="color:white;">White on Forest</span><span class="contrast-badge pass">10.6:1 — AAA</span></div>
+      <div class="contrast-pair" style="background:#C4613A;"><span style="color:white;">White on Terracotta</span><span class="contrast-badge warn">3.4:1 — Large text only</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="typography">
+    <div class="section-number">04</div>
+    <h2 class="section-title">Typography</h2>
+    <p class="section-intro">Two typefaces, clear roles. Playfair Display brings editorial warmth to headings. DM Sans handles everything functional.</p>
+    <div class="type-scale">
+      <div class="scale-row"><span class="scale-meta">Playfair · 700 · -3%</span><span class="spec-h1">Made to last.</span></div>
+      <div class="scale-row"><span class="scale-meta">Playfair · 700 · -2%</span><span class="spec-h2">Know your materials</span></div>
+      <div class="scale-row"><span class="scale-meta">Playfair · 700 · -1%</span><span class="spec-h3">European linen, washed three times</span></div>
+      <div class="scale-row"><span class="scale-meta">DM Sans · 600 · 0</span><span class="spec-h4">Waffle Linen Throw — Natural</span></div>
+      <div class="scale-row"><span class="scale-meta">DM Sans · 400 · 0</span><span class="spec-body">370gsm waffle weave. Made in Portugal from certified European flax. Gets softer with every wash.</span></div>
+      <div class="scale-row"><span class="scale-meta">DM Sans · 700 · +12%</span><span class="spec-label">Section Label</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="imagery">
+    <div class="section-number">05</div>
+    <h2 class="section-title">Imagery &amp; Visual Style</h2>
+    <p class="section-intro">Real homes, real light, real texture. Not aspirational staging.</p>
+    <div class="style-grid">
+      <div class="style-card"><h4>Photography Direction</h4><ul><li>Natural daylight — window light preferred</li><li>Real homes and lived-in spaces</li><li>Material texture front and center</li><li>Warm, slightly muted color grading</li></ul></div>
+      <div class="style-card"><h4>What to Avoid</h4><ul><li>Perfectly styled interiors that look unliveable</li><li>High-contrast editing or trendy filters</li><li>Generic stock imagery</li><li>Cold, blue-tinted tones</li></ul></div>
+      <div class="style-card"><h4>Illustration &amp; Graphics</h4><ul><li>Minimal and functional only</li><li>Single-weight line art, brand colors only</li><li>No decorative illustration</li></ul></div>
+      <div class="style-card"><h4>Iconography</h4><ul><li>Line style, 1.5px stroke, rounded ends</li><li>24×24px base grid</li><li>Lucide or Phosphor (Regular weight)</li></ul></div>
+    </div>
+  </section>
+
+  <section class="section" id="voice">
+    <div class="section-number">06</div>
+    <h2 class="section-title">Voice &amp; Tone</h2>
+    <p class="section-intro">Always grounded, always specific. The tone shifts to fit context, but we never sound rushed, never corporate.</p>
+    <div class="voice-grid">
+      <div class="voice-card"><h4>Grounded</h4><div class="v-means">In practice: material-first, plain language</div><p>Not "sustainably crafted" — "370gsm waffle linen, certified European flax, made in Portugal." The detail is the point.</p></div>
+      <div class="voice-card"><h4>Honest</h4><div class="v-means">In practice: say what you don't know too</div><p>Trust is built by being specific about limits, not just strengths.</p></div>
+      <div class="voice-card"><h4>Warm</h4><div class="v-means">In practice: personal, not corporate</div><p>A knowledgeable friend — direct, but never cold. Never a press release.</p></div>
+      <div class="voice-card"><h4>Unhurried</h4><div class="v-means">In practice: short sentences, no urgency tactics</div><p>We write like we make things: without rushing. No manufactured scarcity.</p></div>
+    </div>
+    <div class="copy-compare">
+      <div class="copy-bad"><div class="copy-verdict">✕ Off-brand</div><p>"Our eco-conscious, sustainably-sourced, planet-positive products help you live your best sustainable life while reducing your carbon footprint and elevating your living space!"</p></div>
+      <div class="copy-good"><div class="copy-verdict">✓ On-brand</div><p>"Linen washed three times for softness. Certified European flax. No synthetic blends, no shortcuts."</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="brand-in-use">
+    <div class="section-number">07</div>
+    <h2 class="section-title">Brand in Use</h2>
+    <p class="section-intro">How Verdant looks when it's actually working.</p>
+    <div class="mockup-grid">
+      <div>
+        <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--mid);margin-bottom:0.75rem;font-family:'DM Sans',sans-serif;">Social Post (1:1)</div>
+        <div class="social-mockup">
+          <div class="sm-tag">Materials</div>
+          <div class="sm-headline">Not every textile is equal. Know what you're bringing home.</div>
+          <div class="sm-footer"><svg width="22" height="29" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="rgba(245,240,232,0.6)"/></svg><span class="sm-handle">@verdant.co</span></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--mid);margin-bottom:0.75rem;font-family:'DM Sans',sans-serif;">Email Header</div>
+        <div class="email-mockup">
+          <div class="email-header"><svg width="22" height="29" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><path d="M30,3 C52,3 57,22 57,40 C57,58 46,77 30,77 C14,77 3,58 3,40 C3,22 8,3 30,3 Z" fill="#8FAF9A"/></svg><span>Verdant</span></div>
+          <div class="email-body"><div class="email-subject">The waffle linen took 18 months. Here's why.</div><div class="email-preview" style="margin-top:0.5rem;">We couldn't release it until the hand feel after three washes was right…</div><div style="margin-top:1rem;"><span class="btn btn-primary" style="font-size:0.75rem;padding:0.5rem 1.1rem;">Read the full note →</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="button-showcase">
+      <button class="btn btn-primary">Shop the Collection</button>
+      <button class="btn btn-secondary">Learn More</button>
+      <button class="btn btn-ghost">View Materials</button>
+      <button class="btn btn-light">Browse All</button>
+    </div>
+    <div class="divider"></div>
+    <div class="quote-card">
+      <div class="quote-text">"I've replaced the same throw blanket four times in three years. I bought one Verdant piece two years ago and it looks better now than when I got it."</div>
+      <div class="quote-attr">— Marcus T., customer since 2024</div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.sidebar a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const match = document.querySelector(`.sidebar a[href="#${e.target.id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
